@@ -3,8 +3,8 @@ import java.util.*
 
 fun main() {
     println("¿Quieres jugar una partida de piedra, papel y tijera?")
-    println("1. Sí")
-    println("2. No")
+    println("Elige 1 para SÍ jugar")
+    println("Elige 2 para NO jugar")
 
     val elegir = Scanner(System.`in`) //pone el numero que quiera
     val decision: Int = elegir.nextInt()
@@ -12,7 +12,7 @@ fun main() {
         println("Has decidido NO jugar")
     }
     else if (decision == 1){
-        print("Has decidido jugar")
+        println("Has decidido jugar")
         println("Elige tu jugada")
         println("1. Piedra")
         println("2. Papel")
@@ -26,13 +26,13 @@ fun main() {
         val jugadaOrdenador: Int = randomNumber
 
         if (jugadorMano == jugadaOrdenador) {
-            println("Empate")
+            println("El ordenador eligió lo mismo que tú.\n Es un EMPATE")
         }
         else if (jugadorMano == 1) {
             if (jugadaOrdenador == 2) {
-                println("Has perdido")
+                println("El ordenador eligió papel.\n Has perdido")
             } else if (jugadaOrdenador == 3) {
-                println("Has ganado")
+                println("\"El ordenador eligió tijera.\n Has ganado")
             }
         }
         else if (jugadorMano == 2) {
